@@ -9,6 +9,7 @@ class StubAlarm(object):
     def check(self):
         pass
 
+    @property
     def is_alarm_on(self):
         return self.alarm_onReturnValue
         
@@ -41,6 +42,7 @@ class MockAlarm(object):
     def check(self):
         self.actualCheckCallsCount += 1
 
+    @property
     def is_alarm_on(self):
         self.actualAlarmOnCallsCount += 1
         return self.alarm_on
